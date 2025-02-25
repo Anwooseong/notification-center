@@ -13,4 +13,4 @@ public class NotificationApplication {
 }
 
 
-//
+// api(서버), consumer(서버), core(공통)
