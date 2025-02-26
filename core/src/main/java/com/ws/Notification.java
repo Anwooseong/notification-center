@@ -1,5 +1,12 @@
 package com.ws;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.FieldType;
+
 import java.time.Instant;
 
 enum NotificationType {
@@ -8,18 +15,20 @@ enum NotificationType {
     FOLLOW,
 }
 
+@Setter
+@Getter
+@AllArgsConstructor
+@Document("notifications")
 public class Notification {
-    public String id;
-    public Long userId;
-    public NotificationType type;
-    public Instant createdAt;
-    public Instant deletedAt;
+    @Field(targetType = FieldType.STRING)   // ObjectId('123') -> "123"
+    private String id;
 
-    public Notification(String id, Long userId, NotificationType type, Instant createdAt, Instant deletedAt) {
-        this.id = id;
-        this.userId = userId;
-        this.type = type;
-        this.createdAt = createdAt;
-        this.deletedAt = deletedAt;
-    }
+    private Long userId;
+
+    private NotificationType type;
+
+    private Instant createdAt;
+
+    private Instant deletedAt;
+
 }
