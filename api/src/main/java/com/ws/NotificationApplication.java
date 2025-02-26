@@ -1,13 +1,13 @@
-package org.example.example;
+package com.ws;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class NotificationConsumerApplication {
+public class NotificationApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NotificationConsumerApplication.class, args);
+		SpringApplication.run(NotificationApplication.class, args);
 	}
 
 }

@@ -10,6 +10,8 @@ java {
 	}
 }
 
+ext["springCloudVersion"] = "2023.0.0"
+
 allprojects {
 	group = "com.ws"
 	version = "0.0.1-SNAPSHOT"
@@ -40,6 +42,12 @@ subprojects {
 		testImplementation(platform("org.junit:junit-bom:5.10.0"))
 		testImplementation("org.junit.jupiter:junit-jupiter")
 		testImplementation("org.springframework.boot:spring-boot-starter-test")
+	}
+
+	dependencyManagement {
+		imports {
+			mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+		}
 	}
 
 	tasks.test {

@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: notification-consumer
+  profiles:
+    active: local
+    include: event # local profile 이 실행될때 event 도 함꼐 로드하겠다

@@ -1,0 +1,26 @@
+spring:
+  cloud:
+    function:
+      definition: comment; like; follow; # 메시지를 처리했을때 실행하는 함수
+    stream:
+      binder:
+        brokers: localhost:9092
+      bindings:
+        comment-in-0: # 채널명 (function 명 + in + 0) consumer 입장이므로 in
+          destination: comment # 소비하는 토픽명
+          content-type: application/json
+          group: notification-consumer # 컨슈머 그룹명
+          consumer:
+            max-attempts: 2 # 메시지가 두 번 실패하면 dead letter queue 로 이동
+        like-in-0:
+          destination: like # 소비하는 토픽명
+          content-type: application/json
+          group: notification-consumer # 컨슈머 그룹명
+          consumer:
+            max-attempts: 2 # 메시지가 두 번 실패하면 dead letter queue 로 이동
+        follow-in-0:
+          destination: follow # 소비하는 토픽명
+          content-type: application/json
+          group: notification-consumer # 컨슈머 그룹명
+          consumer:
+            max-attempts: 2 # 메시지가 두 번 실패하면 dead letter queue 로 이동
