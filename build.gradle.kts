@@ -10,7 +10,7 @@ java {
 }
 
 allprojects {
-	group = "org.example"
+	group = "com.ws"
 	version = "0.0.1-SNAPSHOT"
 
 	repositories {
