@@ -1,6 +1,7 @@
 package com.ws.api;
 
 import com.ws.event.CommentEvent;
+import com.ws.event.FollowEvent;
 import com.ws.event.LikeEvent;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -40,6 +41,20 @@ public interface EventConsumerTestControllerSpec {
     )
     void like(LikeEvent event);
 
+    @Operation(
+            requestBody = @RequestBody(
+                    content = {
+                            @Content(
+                                    mediaType = MediaType.APPLICATION_JSON_VALUE,
+                                    examples = {
+                                            @ExampleObject(name = "팔로우 이벤트", value = FOLLOW_EVENT_PAYLOAD)
+                                    }
+                            )
+                    }
+            )
+    )
+    void follow(FollowEvent event);
+
     String COMMENT_EVENT_PAYLOAD = """
             {
                 "type": "ADD",
@@ -54,6 +69,15 @@ public interface EventConsumerTestControllerSpec {
                 "type": "ADD",
                 "postId": 1,
                 "userId": 2,
+                "createdAt": "2025-02-27T08:33:28.665+00:00"
+            }
+            """;
+
+    String FOLLOW_EVENT_PAYLOAD = """
+            {
+                "type": "ADD",
+                "userId": 2,
+                "targetUserId": 1,
                 "createdAt": "2025-02-27T08:33:28.665+00:00"
             }
             """;
