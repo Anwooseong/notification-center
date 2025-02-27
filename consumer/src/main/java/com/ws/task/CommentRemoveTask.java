@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;
-import java.util.Optional;
 
 @Slf4j
 @Component
@@ -26,7 +25,7 @@ public class CommentRemoveTask {
             return;
         }
 
-        notificationGetService.getNotification(NotificationType.COMMENT, event.getCommentId())
+        notificationGetService.getNotificationByTypeAndCommentId(NotificationType.COMMENT, event.getCommentId())
                 .ifPresentOrElse(
                         notification -> notificationRemoveService.deleteById(notification.getId()),
                         () -> log.error("Notification not found")
