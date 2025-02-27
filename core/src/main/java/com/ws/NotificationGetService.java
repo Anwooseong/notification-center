@@ -20,6 +20,10 @@ public class NotificationGetService {
     }
 
     public Optional<Notification> getNotificationByTypeAndPostId(NotificationType type, Long postId) {
-        return notificationRepository.getByTypeAndPostId(type, postId);
+        return notificationRepository.findByTypeAndPostId(type, postId);
+    }
+
+    public Optional<Notification> getNotificationByTypeAndUserIdAndFollowerId(NotificationType type, long userId, long followerId) {
+        return notificationRepository.findByTypeAndUserIdAndFollowerId(type, userId, followerId);
     }
 }
