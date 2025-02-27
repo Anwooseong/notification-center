@@ -1,5 +1,9 @@
 package com.ws;
 
+import com.ws.domain.CommentNotification;
+import com.ws.domain.Notification;
+import com.ws.domain.NotificationType;
+import com.ws.repository.NotificationRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,7 +12,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.Instant;
-import java.time.temporal.ChronoUnit;
 import java.util.Optional;
 
 import static java.time.temporal.ChronoUnit.DAYS;

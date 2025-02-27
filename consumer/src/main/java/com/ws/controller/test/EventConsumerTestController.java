@@ -1,4 +1,4 @@
-package com.ws.api;
+package com.ws.controller.test;
 
 import com.ws.event.CommentEvent;
 import com.ws.event.FollowEvent;

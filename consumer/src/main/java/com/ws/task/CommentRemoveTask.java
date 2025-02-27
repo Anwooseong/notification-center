@@ -1,7 +1,12 @@
 package com.ws.task;
 
-import com.ws.*;
+import com.ws.client.CommentClient;
+import com.ws.client.PostClient;
+import com.ws.domain.NotificationType;
+import com.ws.domain.Post;
 import com.ws.event.CommentEvent;
+import com.ws.service.NotificationGetService;
+import com.ws.service.NotificationRemoveService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

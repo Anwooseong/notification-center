@@ -1,4 +1,4 @@
-package com.ws;
+package com.ws.utils;
 
 import org.bson.types.ObjectId;
 

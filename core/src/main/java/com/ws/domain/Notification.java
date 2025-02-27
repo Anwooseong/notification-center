@@ -1,4 +1,4 @@
-package com.ws;
+package com.ws.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

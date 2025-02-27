@@ -1,5 +1,6 @@
-package com.ws;
+package com.ws.service;
 
+import com.ws.repository.NotificationRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

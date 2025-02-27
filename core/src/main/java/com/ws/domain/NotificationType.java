@@ -1,4 +1,4 @@
-package com.ws;
+package com.ws.domain;
 
 public enum NotificationType {
     LIKE,

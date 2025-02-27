@@ -1,6 +1,6 @@
-package com.ws;
+package com.ws.client;
 
-import org.springframework.stereotype.Component;
+import com.ws.domain.Comment;
 
 public interface CommentClient {
     Comment getComment(Long id);

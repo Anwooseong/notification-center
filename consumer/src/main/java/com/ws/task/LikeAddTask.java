@@ -1,7 +1,14 @@
 package com.ws.task;
 
-import com.ws.*;
+import com.ws.client.PostClient;
+import com.ws.domain.LikeNotification;
+import com.ws.domain.Notification;
+import com.ws.domain.NotificationType;
+import com.ws.domain.Post;
 import com.ws.event.LikeEvent;
+import com.ws.service.NotificationGetService;
+import com.ws.service.NotificationSaveService;
+import com.ws.utils.NotificationIdGenerator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

@@ -1,5 +1,7 @@
-package com.ws.event;
+package com.ws.consumer;
 
+import com.ws.event.LikeEvent;
+import com.ws.event.LikeEventType;
 import com.ws.task.LikeAddTask;
 import com.ws.task.LikeRemoveTask;
 import lombok.RequiredArgsConstructor;

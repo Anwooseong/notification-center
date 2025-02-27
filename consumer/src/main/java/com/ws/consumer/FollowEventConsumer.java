@@ -1,5 +1,7 @@
-package com.ws.event;
+package com.ws.consumer;
 
+import com.ws.event.FollowEvent;
+import com.ws.event.FollowEventType;
 import com.ws.task.FollowAddTask;
 import com.ws.task.FollowRemoveTask;
 import lombok.RequiredArgsConstructor;

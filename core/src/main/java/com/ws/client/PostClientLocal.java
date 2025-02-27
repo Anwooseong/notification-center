@@ -1,5 +1,6 @@
-package com.ws;
+package com.ws.client;
 
+import com.ws.domain.Post;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;

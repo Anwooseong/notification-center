@@ -1,10 +1,9 @@
-package com.ws;
+package com.ws.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.TypeAlias;
 
 import java.time.Instant;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 @Getter

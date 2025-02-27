@@ -1,4 +1,4 @@
-package com.ws;
+package com.ws.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.TypeAlias;

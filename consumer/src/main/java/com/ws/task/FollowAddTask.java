@@ -1,9 +1,9 @@
 package com.ws.task;
 
-import com.ws.FollowNotification;
-import com.ws.NotificationIdGenerator;
-import com.ws.NotificationSaveService;
-import com.ws.NotificationType;
+import com.ws.domain.FollowNotification;
+import com.ws.utils.NotificationIdGenerator;
+import com.ws.service.NotificationSaveService;
+import com.ws.domain.NotificationType;
 import com.ws.event.FollowEvent;
 import lombok.RequiredArgsConstructor;
 import org.jetbrains.annotations.NotNull;

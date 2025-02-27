@@ -1,8 +1,8 @@
 package com.ws.task;
 
-import com.ws.NotificationGetService;
-import com.ws.NotificationRemoveService;
-import com.ws.NotificationType;
+import com.ws.service.NotificationGetService;
+import com.ws.service.NotificationRemoveService;
+import com.ws.domain.NotificationType;
 import com.ws.event.FollowEvent;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

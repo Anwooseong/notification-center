@@ -1,5 +1,7 @@
-package com.ws;
+package com.ws.repository;
 
+import com.ws.domain.Notification;
+import com.ws.domain.NotificationType;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
