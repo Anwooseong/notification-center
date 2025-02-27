@@ -1,6 +1,7 @@
 package com.ws.event;
 
 import com.ws.task.CommentAddTask;
+import com.ws.task.CommentRemoveTask;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,14 +16,15 @@ import java.util.function.Consumer;
 public class CommentEventConsumer {
 
     private final CommentAddTask commentAddTask;
+    private final CommentRemoveTask commentRemoveTask;
 
     @Bean(name = "comment")
     public Consumer<CommentEvent> comment() {  //application-event.yml에 등록된 function definition에 따라서 함수명 설정
         return event -> {
             if (event.getType() == CommentEventType.ADD) {
                 commentAddTask.processEvent(event);
-            } else {
-                log.info(event.toString());
+            } else if (event.getType() == CommentEventType.REMOVE) {
+                commentRemoveTask.processEvent(event);
             }
         };
     }

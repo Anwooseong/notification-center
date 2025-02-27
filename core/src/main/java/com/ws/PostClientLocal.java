@@ -1,8 +1,11 @@
 package com.ws;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Component
 public class PostClientLocal implements PostClient {
 
     private final Map<Long, Post> posts = new ConcurrentHashMap<>();
