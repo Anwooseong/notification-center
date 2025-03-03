@@ -42,6 +42,9 @@ subprojects {
 		testImplementation(platform("org.junit:junit-bom:5.10.0"))
 		testImplementation("org.junit.jupiter:junit-jupiter")
 		testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+		implementation("org.springdoc:springdoc-openapi-starter-common:2.2.0")
+		implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
 	}
 
 	dependencyManagement {
